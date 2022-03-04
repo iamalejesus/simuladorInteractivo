@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.navbar {
+  background-color: #2196F3;
+  padding: 0rem 2rem 0rem 2rem;
+  flex-wrap: nowrap;
+}
+
+.container-fluid {
+  justify-content: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+.main {
+  margin: 5rem 0rem 5rem 0rem;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #2196F3;
+}
+form {
+  
+  text-align: center;
+  width: 90%;
+  background-color: #efefef;
+  padding: 20px;
+  color: rgb(255, 255, 255);
+  border-radius: 20px;
+}
+
+.form-select {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+form .btn {
+  margin: 2em 1em;
+  width: 60%;
+  height: 40px;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 2px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+.icons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+
+}
+
+.fas {
+  font-size: 2.5em;  
+  border-radius: 50%;
+  padding: 40px;
+
+}
+.fa-plane {
+  color: #2196F1;
+}
+.fa-wallet {
+  color: #2195f2;
+}
+.fa-money-bill-wave-alt{
+  color: #2195f3;
+}
+
+.container-data {
+  display: flex;
+  justify-content: space-around;
+  margin-top: -1em;
+}
+
+.container-data h6 {
+  text-align: center;
+}
+
+.footer {
+  margin: 5rem 0rem 0rem 0rem;
+  background-color: #2195f2;
+}
+
+.result {
+  text-align: center;
+}
