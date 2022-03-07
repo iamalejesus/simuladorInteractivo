@@ -64,4 +64,3 @@ console.table (tipoClase);
 destinos.unshift ("Berlín, Berlín, Alemania");
 console.table (destinos);
 
-//.
