@@ -4,6 +4,16 @@ let ticket = 0;
 let clase = 0;
 const food = 1500;
 
+//Arrays
+const destinos = [" ", "Buenos Aires, Ciudad de Buenos Aires, Argentina","Nueva York, Nueva York, Estados Unidos", "Londres, Inglaterra, Reino Unido", "Sídney, Nueva Gales del Sur, Australia"]; 
+
+const tipoClase = [" ", "Turista", "Bussines"];
+
+const destinyJS = document.getElementById("destinyJS");
+const ticketsJS = document.getElementById("ticketsJS");
+const classJS = document.getElementById("classJS");
+const foodJS = document.getElementById("foodJS");
+
 //Objeto Cotizador
 class Cotizador {
     constructor (destiny, ticket, clase, food){
@@ -31,10 +41,6 @@ cotizarPasaje()
 alert ("El valor total de los pasajes es de:" + " AR$" + res);
 console.log ("El valor total de los pasajes es de:" + " AR$" + res);
 
-//Arrays
-const destinos = [" ", "Buenos Aires, Ciudad de Buenos Aires, Argentina","Nueva York, Nueva York, Estados Unidos", "Londres, Inglaterra, Reino Unido", "Sídney, Nueva Gales del Sur, Australia"]; 
-
-const tipoClase = [" ", "Turista", "Bussines"];
 
 //.table
 console.table (destinos);
@@ -64,3 +70,12 @@ console.table (tipoClase);
 destinos.unshift ("Berlín, Berlín, Alemania");
 console.table (destinos);
 
+//.DOM
+
+const cargarDestinos = () => {
+    for (dest of destinos) {
+        let destList = "<option>" + dest + "</option>";
+        destinyJS.innerHTML += destList;
+    }
+}
+cargarDestinos ();
