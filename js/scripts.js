@@ -4,15 +4,21 @@ let ticket = 0;
 let clase = 0;
 const food = 1500;
 
-//Arrays
-const destinos = [" ", "Buenos Aires, Ciudad de Buenos Aires, Argentina","Nueva York, Nueva York, Estados Unidos", "Londres, Inglaterra, Reino Unido", "Sídney, Nueva Gales del Sur, Australia"]; 
-
-const tipoClase = [" ", "Turista", "Bussines"];
-
 const destinyJS = document.getElementById("destinyJS");
 const ticketsJS = document.getElementById("ticketsJS");
 const classJS = document.getElementById("classJS");
 const foodJS = document.getElementById("foodJS");
+
+//Arrays
+const destinos = ["Buenos Aires, Ciudad de Buenos Aires, Argentina","Nueva York, Nueva York, Estados Unidos", "Londres, Inglaterra, Reino Unido", "Sídney, Nueva Gales del Sur, Australia"]; 
+
+const tipoClase = ["Turista", "Bussines"];
+
+const pasajes = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+
+const foodSelect = ["Si", "No"];
+
+const expenses = []
 
 //Objeto Cotizador
 class Cotizador {
@@ -63,6 +69,7 @@ function agregarDestino (nuevoDestino) {
 agregarDestino ("Miami, Florida, Estados Unidos");
 console.table (destinos);
 
+
 tipoClase.push ("Primera Clase");
 console.table (tipoClase);
 
@@ -74,8 +81,32 @@ console.table (destinos);
 
 const cargarDestinos = () => {
     for (dest of destinos) {
-        let destList = "<option>" + dest + "</option>";
+        let destList = "<option class=destiny-item>" + dest + "</option>";
         destinyJS.innerHTML += destList;
     }
 }
 cargarDestinos ();
+
+const cargarTickets = () => {
+    for (tick of pasajes) {
+        let tickList = "<option>" + tick + "</option>";
+        ticketsJS.innerHTML += tickList;
+    }
+}
+cargarTickets ();
+
+const cargarClase = () => {
+    for (cla of tipoClase) {
+        let classList = "<option>" + cla + "</option>";
+        classJS.innerHTML += classList;
+    }
+}
+cargarClase ();
+
+const cargarFood = () => {
+    for (foo of foodSelect) {
+        let foodList = "<option>" + foo + "</option>";
+        foodJS.innerHTML += foodList;
+    }
+}
+cargarFood ();
