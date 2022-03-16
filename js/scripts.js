@@ -8,6 +8,7 @@ const destinyJS = document.getElementById("destinyJS");
 const ticketsJS = document.getElementById("ticketsJS");
 const classJS = document.getElementById("classJS");
 const foodJS = document.getElementById("foodJS");
+const resultJS = document.getElementById("resultJS");
 
 //Arrays
 const destinos = ["Buenos Aires, Ciudad de Buenos Aires, Argentina","Nueva York, Nueva York, Estados Unidos", "Londres, Inglaterra, Reino Unido", "Sídney, Nueva Gales del Sur, Australia"]; 
@@ -81,7 +82,7 @@ console.table (destinos);
 
 const cargarDestinos = () => {
     for (dest of destinos) {
-        let destList = "<option class=destiny-item>" + dest + "</option>";
+        let destList = "<option onclick=agregarAlCarrito(dest) class=destiny-item>" + dest + "</option>";
         destinyJS.innerHTML += destList;
     }
 }
@@ -89,7 +90,7 @@ cargarDestinos ();
 
 const cargarTickets = () => {
     for (tick of pasajes) {
-        let tickList = "<option>" + tick + "</option>";
+        let tickList = "<option onclick=agregarAlCarrito(tick)>" + tick + "</option>";
         ticketsJS.innerHTML += tickList;
     }
 }
@@ -97,7 +98,7 @@ cargarTickets ();
 
 const cargarClase = () => {
     for (cla of tipoClase) {
-        let classList = "<option>" + cla + "</option>";
+        let classList = "<option onclick=agregarAlCarrito(cla)>" + cla + "</option>";
         classJS.innerHTML += classList;
     }
 }
@@ -105,8 +106,18 @@ cargarClase ();
 
 const cargarFood = () => {
     for (foo of foodSelect) {
-        let foodList = "<option>" + foo + "</option>";
+        let foodList = "<option onclick=agregarAlCarrito(foo)>" + foo + "</option>";
         foodJS.innerHTML += foodList;
     }
 }
 cargarFood ();
+
+const agregarAlCarrito = (prod) => {
+    if (prod.trim() > "") {
+        const liProductos = document.createElement ("li")
+                liProductos.className = "producto-item"
+                liProductos.innerText = prod 
+                resultJS.append (liProductos)
+    }
+}
+//agregarAlCarrito ();
