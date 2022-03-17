@@ -82,7 +82,7 @@ console.table (destinos);
 
 const cargarDestinos = () => {
     for (dest of destinos) {
-        let destList = "<option onclick=agregarAlCarrito(dest) class=destiny-item>" + dest + "</option>";
+        let destList = `<option onclick=agregarAlCarrito(${dest}) class=destiny-item> ${dest} </option>`;
         destinyJS.innerHTML += destList;
     }
 }
