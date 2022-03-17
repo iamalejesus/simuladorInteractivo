@@ -90,7 +90,7 @@ cargarDestinos ();
 
 const cargarTickets = () => {
     for (tick of pasajes) {
-        let tickList = "<option onclick=agregarAlCarrito(tick)>" + tick + "</option>";
+        let tickList = `<option onclick=agregarAlCarrito(${tick})> ${tick} </option>`;
         ticketsJS.innerHTML += tickList;
     }
 }
