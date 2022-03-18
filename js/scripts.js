@@ -11,6 +11,7 @@ const foodJS = document.getElementById("foodJS");
 const resultJS = document.getElementById("resultJS");
 const buttonCheck = document.getElementById("buttonCheck")
 
+
 //Arrays
 const destinos = ["Buenos Aires, Ciudad de Buenos Aires, Argentina","Nueva York, Nueva York, Estados Unidos", "Londres, Inglaterra, Reino Unido", "Sídney, Nueva Gales del Sur, Australia"]; 
 
@@ -123,6 +124,18 @@ const agregarAlCarrito = (prod) => {
 }
 //agregarAlCarrito ();
 
-function checkOut (){
-    alert ("Su compra ha sido exitosa!")
+
+// Evento con tecla Enter
+
+document.addEventListener("keydown", checkOut);
+
+function checkOutClick () {
+    alert ("Su compra ha sido exitosa!");
+}
+
+function checkOut (event){
+    const enter = event.keyCode;
+    if (enter == 13){
+        checkOutClick ();
+    }
 }
