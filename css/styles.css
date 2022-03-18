@@ -95,3 +95,7 @@ form .btn {
 .result {
   text-align: center;
 }
+
+.button{
+  display: flex;
+}
